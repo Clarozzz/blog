@@ -1,0 +1,59 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import "@fontsource-variable/inter";
+---
+
+<div class="sticky top-0 w-full py-2 2xl:px-96 lg:px-36 px-6 shadow-md flex justify-between gap-6 bg-slate-50">
+    <div class="flex items-center lg:hidden">
+        <Icon name="mdi:menu" size={30} />
+    </div>
+    <div class="flex gap-2">
+        <Image src="/images/icon3.png" alt="icono" width="50" height="50" />
+        <div class="lg:flex items-center hidden">
+            <ul class="flex flex-row gap-2 text-xl font-semibold">
+                <li
+                    class="hover:bg-slate-200 p-2 rounded-lg cursor-pointer transition-colors"
+                >
+                <a href="/">
+                    Inicio
+                </a>
+                </li>
+                <li
+                    class="hover:bg-slate-200 p-2 rounded-lg cursor-pointer transition-colors"
+                >
+                <a href="/about">
+                    Sobre Mi
+
+                </a>
+                </li>
+                <li
+                    class="hover:bg-slate-200 p-2 rounded-lg cursor-pointer transition-colors"
+                >
+                <a href="/posts">
+                    Posts
+                </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="lg:flex items-center hidden">
+        <ul class="flex flex-row gap-3">
+            <li>
+                <a href="#">
+                    <Icon class="text-slate-700 hover:text-c3 transition-colors" name="mdi:email" size={30} />                
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <Icon class="text-slate-700 hover:text-c3 transition-colors" name="mdi:github" size={30} />
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <Icon class="text-slate-700 hover:text-c3 transition-colors" name="mdi:linkedin" size={30} />
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
