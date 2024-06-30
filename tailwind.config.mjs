@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+export default{
   darkMode: ["class"],
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   prefix: "",
@@ -50,7 +50,7 @@ export default {
         c2: "#9ebebb",
         c3: "#77aca2",
         c4: "#468189",
-        c5: "#031926"
+        c5: "#031926",
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -1,13 +1,16 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro"
 import Head from "./Head.astro";
 import '@/styles/globals.css'
+import '@fontsource-variable/inter';
 ---
 
 <html lang="en">
     <Head />
-    <body class="bg-slate-50">
-        <Navbar />
+    <body class="bg-slate-50 selection:bg-c4 selection:text-white">
+        <Navbar />        
         <slot />
+        <Footer />
     </body>
 </html>
