@@ -1,0 +1,22 @@
+---
+import Main from "../../layouts/Main.astro";
+import PostCard from "@/components/PostCard";
+
+const allPosts = await Astro.glob("./*.md")
+allPosts.forEach((post) => {
+    console.log(post.frontmatter, post.url)
+})
+---
+
+<Main>
+    <div class="2xl:mx-80 2xl:px-10 md:mx-20 px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 my-14">
+            {
+                allPosts.map((post) => (
+                    <PostCard post={post} />
+                ))
+            }
+
+        </div>
+    </div>
+</Main>

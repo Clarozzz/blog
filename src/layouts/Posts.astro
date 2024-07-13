@@ -1,0 +1,27 @@
+---
+import Main from "../layouts/Main.astro";
+import { Image } from "astro:assets";
+
+const { frontmatter } = Astro.props;
+
+---
+<Main>
+    <div class="2xl:mx-96 2xl:px-32 my-6 md:mx-40 md:px-6">
+        <div class="md:flex items-center">
+            <Image
+                format="webp"
+                src="/images/f1.jpg"
+                alt="icono"
+                width="300"
+                height="300"
+                class="mx-auto"
+            />
+            <h1 class="text-6xl font-bold px-6">
+                ¡Descubre un poco sobre mi!
+            </h1>
+        </div>
+        <div class="p-6 text-xl">
+            
+        </div>
+    </div>
+</Main>

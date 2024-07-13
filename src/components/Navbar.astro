@@ -9,7 +9,7 @@ import navData from "../data/navData";
 >
     <div class="flex gap-2">
         <div class="flex items-center gap-1">
-            <Image src="/images/icon3.png" alt="icono" width="50" height="50" />
+            <Image src="/images/icon3.webp" alt="icono" width="50" height="50" />
             <ul class="flex flex-row gap-1 text-xl font-semibold">
                 {
                     navData.map((item) => (
@@ -17,6 +17,7 @@ import navData from "../data/navData";
                             <a
                                 class="hover:bg-slate-200 rounded-lg cursor-pointer transition-colors p-2"
                                 href={item.path}
+                                name="navLink"
                             >
                                 {item.name}
                             </a>
@@ -66,3 +67,7 @@ import navData from "../data/navData";
         </ul>
     </div>
 </nav>
+
+<script>
+    import "../js/nav.js"
+</script>
