@@ -6,22 +6,36 @@ const { frontmatter } = Astro.props;
 
 ---
 <Main>
-    <div class="2xl:mx-96 2xl:px-32 my-6 md:mx-40 md:px-6">
-        <div class="md:flex items-center">
+    <div class="2xl:mx-96 2xl:px-32 mt-10 mb-24 md:mx-40 md:px-6">
+        <div class="p-6">
             <Image
                 format="webp"
-                src="/images/f1.jpg"
+                src={frontmatter.heroImage}
                 alt="icono"
-                width="300"
-                height="300"
-                class="mx-auto"
+                width="900"
+                height="900"
+                class="mx-auto rounded-xl shadow-xl mb-8"
             />
-            <h1 class="text-6xl font-bold px-6">
-                ¡Descubre un poco sobre mi!
-            </h1>
+            <div class="flex flex-col gap-4 px-6 mb-8">
+                <h1 class="text-6xl font-bold">
+                    {frontmatter.title}
+                </h1>
+                <h2>
+                    {frontmatter.description}
+                </h2>
+                <h2>
+                    Fecha de publicacion: {frontmatter.pubDate}
+                </h2>
+                <h2>
+                    Escrito por:<span class="text-c4 font-bold"> {frontmatter.author}</span>
+                </h2>
+            </div>
+            <hr class="border border-slate-300">
         </div>
         <div class="p-6 text-xl">
-            
+            <slot>
+
+            </slot>
         </div>
     </div>
 </Main>

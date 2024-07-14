@@ -10,7 +10,10 @@ allPosts.forEach((post) => {
 
 <Main>
     <div class="2xl:mx-80 2xl:px-10 md:mx-20 px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 my-14">
+        <h1 class="text-6xl font-bold mt-8">
+            Posts recientes:
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10 mb-24">
             {
                 allPosts.map((post) => (
                     <PostCard post={post} />
